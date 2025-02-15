@@ -74,8 +74,8 @@ jobs:
 #        id: auth
 #        name: Authenticate to GCP
 #        with:
-#          project_id: 'my-project' # update with your project ID
-#          workload_identity_provider: 'YOUR WORKLOAD PROVIDER projects/012345678901/locations/global/workloadIdentityPools/github-actions/providers/dansc0de' # update with your Workload Identity Pool
+#          project_id: 'hw-2-451022'
+#          workload_identity_provider: 'projects/1042414372078/locations/global/workloadIdentityPools/github/providers/my-repo'
 
 #      # configure/login with docker
 #      - name: gcloud Configure Docker
