@@ -74,12 +74,12 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'hw-2-451022'
-          workload_identity_provider: 'projects/1042414372078/locations/global/workloadIdentityPools/github/providers/my-repo'
+          project_id: 'cicd-benj210003'
+          workload_identity_provider: 'projects/517895982903/locations/global/workloadIdentityPools/github/providers/my-repo'
 
       # configure/login with docker
       - name: gcloud Configure Docker
-        run: gcloud auth configure-docker us-east1-docker.pkg.dev
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
       # setup docker buildx
       - name: Setup docker buildx
@@ -94,4 +94,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-east1-docker.pkg.dev/1660-hw-2/docker-hw2/fastapi-server:v2
+          tags: us-central1-docker.pkg.dev/cicd-benj210003/docker-repo/fastapi-server:v2
