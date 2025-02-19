@@ -4,12 +4,10 @@ WORKDIR /app
 
 RUN pip install --upgrade pip && pip install poetry
 
-COPY pyproject.toml poetry.toml .
+COPY . .
 
 RUN poetry config virtualenvs.create false \
     && poetry install --no-root --no-interaction --no-ansi
-
-COPY . .
 
 FROM python:3.11-buster AS app
 
